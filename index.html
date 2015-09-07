@@ -1,0 +1,60 @@
+
+<html charset="utf-8">
+<head>
+<title>字符画-天马行空工作室(tmxk.org)</title>
+</head>
+<body>
+<style>
+*{margin:0;padding:0}
+
+</style>
+
+<script>
+//["图像大小","字符画大小","前景字符","背景字符","背景颜色值=r+g+b；其中rgb(r,g,b)","canvas大小","图像地址"]
+var set=[200,800,"#","&nbsp;",1020,500,"r-c.png"];
+var r_cimg=function (set){
+    this.init=function(){
+        var ctmp=d.createElement("canvas"),dtmp=d.createElement("div"), style=d.createElement("style");
+        ctmp.id="r_c",ctmp.width=set[5],ctmp.height=set[5],d.body.appendChild(ctmp);
+        var c=d.getElementById("r_c").getContext("2d"),   
+        stylec=d.createTextNode("#r_cdiv{position:absolute;background:#fff;left:500px;top:0px;width:800px;height:800px}span{display:inline-block;}");
+        style.appendChild(stylec),d.body.appendChild(style);       
+        dtmp.id="r_cdiv",dtmp.style="",d.body.appendChild(dtmp);
+        return c;
+    }
+
+    this.char=function(set){
+        var id=c.getImageData(0,0,set[0],set[0]),ia=id.data,s=[],t=[];
+        for(var i=1;i<=ia.length;i++)
+        if (i%4==0) 
+        {
+            t.push("<span style='width:"+set[1]/set[0]+"px;height:"+set[1]/set[0]+"px;font-size:"+set[1]/set[0]+"px;color:rgb("+ia[i-4]+","+ia[i-3]+","+ia[i-2]+")'>"+((ia[i-4]+ia[i-3]+ia[i-2]+ia[i-1]!=set[4])?set[2]:set[3])+"</span>");
+            if (i%(set[0]*4)==0)
+            {
+                s.push(t.join("")+"<br/>");
+                t=[];
+            }
+        }
+        d.getElementById("r_cdiv").innerHTML=s.join("");
+    }
+
+    this.load=function(a){
+        var img =new Image();
+        a=a||set;
+        img.src=a[6];
+        c.clearRect(0,0,c.canvas.width,c.canvas.height);
+        d.getElementById("r_cdiv").innerHTML="";
+        img.onload=function(){
+            c.drawImage(img,0,0,a[0],a[0]);
+            that.char(a)
+        }
+    }
+     var that=this,d=document,c=this.init();
+}
+
+if(location.search.split("?url=")[1]) set[6]=location.search.split("?url=")[1];
+var r_cimg=new r_cimg(set);
+r_cimg.load();
+</script>
+</body>
+</html>
