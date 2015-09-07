@@ -21,5 +21,5 @@ r_cimg.load();
 + [http://tmxk.org/char/?url=4.png](http://tmxk.org/char/?url=4.png)
 + [http://tmxk.org/char/?url=3.png](http://tmxk.org/char/?url=3.png)
 + [http://tmxk.org/char/?url=2.png](http://tmxk.org/char/?url=2.png)
-+ [http://tmxk.org/static/image/common/logo.png](http://tmxk.org/static/image/common/logo.png)
++ [http://tmxk.org/char/?url=http://..logo.png](http://tmxk.org/char/?url=http://tmxk.org/static/image/common/logo.png)
 
