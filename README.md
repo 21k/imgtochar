@@ -15,13 +15,11 @@ r_cimg.load();
 
 ### demo
 
-[http://tmxk.org/char/](http://tmxk.org/char/)
-http://tmxk.org/char/?url=6.png
-http://tmxk.org/char/?url=5.png
-http://tmxk.org/char/?url=4.png
-http://tmxk.org/char/?url=3.png
-http://tmxk.org/char/?url=2.png
-http://tmxk.org/char/?url=1.png
-http://tmxk.org/char/?url=http:/ ... age/common/logo.png
-http://tmxk.org/char/?url=r-c.png
++ [http://tmxk.org/char/](http://tmxk.org/char/)
++ [http://tmxk.org/char/?url=6.png](http://tmxk.org/char/?url=6.png)
++ [http://tmxk.org/char/?url=5.png](http://tmxk.org/char/?url=5.png)
++ [http://tmxk.org/char/?url=4.png](http://tmxk.org/char/?url=4.png)
++ [http://tmxk.org/char/?url=3.png](http://tmxk.org/char/?url=3.png)
++ [http://tmxk.org/char/?url=2.png](http://tmxk.org/char/?url=2.png)
++ [http://tmxk.org/char/?url=1.png](http://tmxk.org/char/?url=1.png)
 
